@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  --obsidian: #0b0c10;
+  --charcoal: #1a1c23;
+  --gold: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.4);
+  --platinum: #e5e4e2;
+  --glass-bg: rgba(26, 28, 35, 0.6);
+  --glass-border: rgba(229, 228, 226, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--obsidian);
+  color: var(--platinum);
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at 50% 0%, var(--charcoal) 0%, var(--obsidian) 70%);
+}
+
+.device-container {
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  max-height: 850px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 15px var(--gold-glow); }
+  50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); }
+  100% { box-shadow: 0 0 15px var(--gold-glow); }
+}
+
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
